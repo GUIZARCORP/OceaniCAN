@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D454F505-40DD-4593-8E74-B14BEE2DDC8D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>oceanican</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3F9B130171C91992DB3249A08285ED9B87D5BA68</key>
+		<string>https://github.com/GUIZARCORP/OceaniCAN.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>oceanican.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3F9B130171C91992DB3249A08285ED9B87D5BA68</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GUIZARCORP/OceaniCAN.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3F9B130171C91992DB3249A08285ED9B87D5BA68</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3F9B130171C91992DB3249A08285ED9B87D5BA68</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OceaniCAN-iphone</string>
+		</dict>
+	</array>
+</dict>
+</plist>
