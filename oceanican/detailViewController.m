@@ -48,38 +48,45 @@
 {
     if (!self.dogsIndex == 0)
     {
-    self.dogName.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"nombre"]];
         
-    self.navigationItem.title = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"nombre"]];
-
-    
-    self.dogGender.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"genero"]];
-    
-    self.dogColor.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"color"]];
-    
-    self.dogDescription.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"descripcion"]];
-    
-    
-    NSString *despa = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"desparacitado"]];
-    
-    if ([despa integerValue] == 1)
-    {
-        self.dogDespa.text = @"✔︎";
-    }
-    else
-    {
-        self.dogDespa.text = @"✖︎";
-    }
-    
-    
-    
-    // Here we use the new provided setImageWithURL: method to load the web image
-    [self.dogImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"foto"]]]
-                         placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+        [UIView beginAnimations:@"Flip" context:nil];
+        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.view cache:YES];
+        [UIView commitAnimations];
+        
+        self.dogName.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"nombre"]];
+        
+        self.navigationItem.title = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"nombre"]];
+        
+        
+        self.dogGender.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"genero"]];
+        
+        self.dogColor.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"color"]];
+        
+        self.dogDescription.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"descripcion"]];
+        
+        
+        NSString *despa = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"desparacitado"]];
+        
+        if ([despa integerValue] == 1)
+        {
+            self.dogDespa.text = @"✔︎";
+        }
+        else
+        {
+            self.dogDespa.text = @"✖︎";
+        }
+        
+        
+        
+        // Here we use the new provided setImageWithURL: method to load the web image
+        [self.dogImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex - 1] objectForKey:@"foto"]]]
+                             placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
         
         self.dogsIndex = self.dogsIndex - 1;
-
-    
+        
+        
     }
     
 }
@@ -92,6 +99,12 @@
     }
     else
     {
+        [UIView beginAnimations:@"Flip" context:nil];
+        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.view cache:YES];
+        [UIView commitAnimations];
+        
         self.dogName.text = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex + 1] objectForKey:@"nombre"]];
         
         self.navigationItem.title = [NSString stringWithFormat:@"%@", [[self.dogsArrayComplete objectAtIndex:self.dogsIndex + 1] objectForKey:@"nombre"]];
@@ -124,6 +137,7 @@
         
     }
 }
+
 
 
 
